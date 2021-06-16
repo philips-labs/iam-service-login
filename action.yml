@@ -1,0 +1,33 @@
+# action.yml
+name: 'IAM Service login'
+description: 'Login to IAM using service credentials'
+inputs:
+  service-id:
+    description: 'The IAM service id'
+    required: true
+    default: 'notset'
+  private-key:
+    description: 'The IAM service private key'
+    required: true
+    default: 'notset'
+  region:
+    description: 'The IAM region to log into'
+    required: true
+    default: 'us-east'
+  environment:
+    description: 'The IAM environment to log into'
+    required: true
+    default: 'client-test'
+outputs:
+  token:
+    description: 'The IAM token'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.region }}
+    - ${{ inputs.environment }}
+    - ${{ inputs.service-id }}
+    - ${{ inputs.private-key }}
+
+
