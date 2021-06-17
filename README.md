@@ -41,7 +41,25 @@ Informational message on the output
 ## Example usage
 
 ```yml
-uses: loafoe/iam-service-login@v1
-  with:
-    who-to-greet: 'Mona the Octocat'
+on: [push]
+
+name: test service tokens
+
+jobs:
+  test_token:
+    name: Test service tokens
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: philips-labs/iam-service-login@v1
+        id: token
+        with:
+          region: us-east
+          environment: client-test
+          service-id: ${{ secrets.SERVICE_ID }}
+          private-key: ${{ secrets.PRIVATE_KEY }}
+          client-id: ${{ secrets.CLIENT_ID }}
+          client-secret: ${{ secrets.CLIENT_SECRET }}
+      - name: Output masked token
+        run: echo "The token is ${{ steps.token.outputs.token }}"
 ```
