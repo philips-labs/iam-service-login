@@ -4,3 +4,4 @@ config.yml
 manifest.yml
 redshift.json
 *.csv
+/iam-service-login

@@ -1,10 +1,10 @@
 #!/bin/sh -l
 
-region=$1
-environment=$2
-client_id=$3
-client_secret=$4
-service_id=$5
-private_key=$6
+export region=$1
+export environment=$2
+export client_id=$3
+export client_secret=$4
+export service_id=$5
+export private_key=$6
 
 /iam-service-login

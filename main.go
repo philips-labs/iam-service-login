@@ -15,6 +15,9 @@ func main() {
 	region := os.Getenv("region")
 	environment := os.Getenv("environment")
 
+	fmt.Printf("client_id=%s\n", clientID)
+	fmt.Printf("service_id=%s\n", serviceID)
+
 	client, err := iam.NewClient(nil, &iam.Config{
 		Region:         region,
 		Environment:    environment,
@@ -22,7 +25,7 @@ func main() {
 		OAuth2Secret:   clientSecret,
 	})
 	if err != nil {
-		fmt.Printf("::set-output name=message::%v\n", err)
+		fmt.Printf("::set-output name=message::NewClient: %v\n", err)
 		os.Exit(1)
 	}
 	err = client.ServiceLogin(iam.Service{
@@ -30,7 +33,7 @@ func main() {
 		PrivateKey: privateKey,
 	})
 	if err != nil {
-		fmt.Printf("::set-output name=message::%v\n", err)
+		fmt.Printf("::set-output name=message::ServiceLogin: %v\n", err)
 		os.Exit(1)
 	}
 	fmt.Printf("::add-mask::%s\n", client.Token())
