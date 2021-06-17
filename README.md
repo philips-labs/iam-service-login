@@ -20,14 +20,6 @@ This action logs into HSDP IAM with service credentials
 
 **Required** The private key of the service ID
 
-## `client_id`
-
-**Required** The OAuth2 client ID to use
-
-## `client_secret`
-
-**Required** The OAuth2 client secret to use
-
 ## Outputs
 
 ## `token`
@@ -58,8 +50,6 @@ jobs:
           environment: client-test
           service-id: ${{ secrets.SERVICE_ID }}
           private-key: ${{ secrets.PRIVATE_KEY }}
-          client-id: ${{ secrets.CLIENT_ID }}
-          client-secret: ${{ secrets.CLIENT_SECRET }}
       - name: Output masked token
         run: echo "The token is ${{ steps.token.outputs.token }}"
 ```

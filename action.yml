@@ -21,14 +21,6 @@ inputs:
     description: 'The IAM environment to log into'
     required: true
     default: 'client-test'
-  client-id:
-    description: 'The client ID to use'
-    requred: true
-    default: 'notset'
-  client-secret:
-    description: 'The client secret to use'
-    requred: true
-    default: 'notset'
 outputs:
   token:
     description: 'The IAM token'
@@ -40,7 +32,5 @@ runs:
   args:
     - ${{ inputs.region }}
     - ${{ inputs.environment }}
-    - ${{ inputs.client-id }}
-    - ${{ inputs.client-secret }}
     - ${{ inputs.service-id }}
     - ${{ inputs.private-key }}
