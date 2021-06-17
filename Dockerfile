@@ -1,5 +1,5 @@
 # Pre-built binary
-FROM philipslabs:iam-service-login:latest as binary
+FROM philipslabs/iam-service-login:latest as binary
 # TODO: add signature checking at some point
 
 FROM alpine:3.14.0
