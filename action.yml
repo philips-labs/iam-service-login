@@ -33,7 +33,7 @@ outputs:
     description: 'An informational message about the request'
 runs:
   using: 'docker'
-  image: 'Dockerfile.action'
+  image: 'Dockerfile'
   args:
     - ${{ inputs.region }}
     - ${{ inputs.environment }}
