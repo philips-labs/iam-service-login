@@ -29,13 +29,15 @@ inputs:
 outputs:
   token:
     description: 'The IAM token'
+  message:
+    description: 'An informational message about the request'
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
     - ${{ inputs.region }}
     - ${{ inputs.environment }}
+    - ${{ inputs.client-id }}
+    - ${{ inputs.client-secret }}
     - ${{ inputs.service-id }}
     - ${{ inputs.private-key }}
-
-
