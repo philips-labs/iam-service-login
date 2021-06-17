@@ -8,7 +8,7 @@ RUN GIT_COMMIT=$(git rev-parse --short HEAD) && \
     CGO_ENABLED=0 go build -o /iam-service-login -ldflags "-X main.GitCommit=${GIT_COMMIT}"
 
 # Container image that runs your code
-FROM alpine:3.13
+FROM alpine:3.14.0
 
 # Copies your code file from your action repository to the filesystem path `/` of the container
 COPY --from=builder /iam-service-login /iam-service-login
