@@ -20,11 +20,23 @@ This action logs into HSDP IAM with service credentials
 
 **Required** The private key of the service ID
 
+## `client_id`
+
+**Required** The OAuth2 client ID to use
+
+## `client_secret`
+
+**Required** The OAuth2 client secret to use
+
 ## Outputs
 
 ## `token`
 
 The IAM token
+
+## `message`
+
+Informational message on the output
 
 ## Example usage
 
