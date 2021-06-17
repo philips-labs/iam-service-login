@@ -2,8 +2,9 @@
 
 region=$1
 environment=$2
-service_id=$3
-private_key=$4
+client_id=$3
+client_secret=$4
+service_id=$5
+private_key=$6
 
-echo "::add-mask::TOKENHERE"
-echo "::set-output name=token::TOKENHERE"
+/iam-service-login
