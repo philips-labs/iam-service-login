@@ -1,5 +1,8 @@
 # action.yml
 name: 'IAM Service login'
+branding:
+  icon: 'at-sign'
+  color: 'blue'
 description: 'Login to IAM using service credentials'
 inputs:
   service-id:
