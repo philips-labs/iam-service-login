@@ -16,7 +16,7 @@ This action logs into HSDP IAM with service credentials
 
 **Required** The service ID to use
 
-## `environment`
+## `private-key`
 
 **Required** The private key of the service ID
 
