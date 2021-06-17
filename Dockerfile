@@ -4,9 +4,7 @@ COPY go.mod .
 COPY go.sum .
 RUN go mod download
 COPY . .
-RUN git rev-parse --short HEAD
-RUN GIT_COMMIT=$(git rev-parse --short HEAD) && \
-    CGO_ENABLED=0 go build -o /iam-service-login -ldflags "-X main.GitCommit=${GIT_COMMIT}"
+RUN CGO_ENABLED=0 go build -o /iam-service-login
 
 # Container image that runs your code
 FROM alpine:3.14.0
