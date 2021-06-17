@@ -47,5 +47,5 @@ func main() {
 	}
 	fmt.Printf("::add-mask::%s\n", client.Token())
 	fmt.Printf("::set-output name=token::%s\n", client.Token())
-
+	fmt.Printf("::set-output name=message::Login success\n")
 }
