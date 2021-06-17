@@ -29,7 +29,7 @@ The IAM token
 ## Example usage
 
 ```yml
-uses: loafoe/iam-service-login-action@v1
+uses: loafoe/iam-service-login@v1
   with:
     who-to-greet: 'Mona the Octocat'
 ```
