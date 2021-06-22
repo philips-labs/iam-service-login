@@ -44,12 +44,12 @@ jobs:
 
     steps:
       - uses: philips-labs/iam-service-login@v1
-        id: token
+        id: service
         with:
           region: us-east
           environment: client-test
           service-id: ${{ secrets.SERVICE_ID }}
           private-key: ${{ secrets.PRIVATE_KEY }}
       - name: Output masked token
-        run: echo "The token is ${{ steps.token.outputs.token }}"
+        run: echo "The token is ${{ steps.service.outputs.token }}"
 ```
