@@ -14,7 +14,7 @@ Login to IAM using service credentials
 | parameter | description | required | default |
 | - | - | - | - |
 | service-id | The IAM service id | `true` | notset |
-| private-key | The IAM service private key | `true` | notset |
+| private-key | The IAM service RSA private key | `true` | notset |
 | region | The IAM region to log into | `true` | us-east |
 | environment | The IAM environment to log into | `true` | client-test |
 
