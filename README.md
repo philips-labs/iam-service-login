@@ -1,34 +1,46 @@
 # IAM Service login action
 
-This action logs into HSDP IAM with service credentials
+<!-- action-docs-description -->
+## Description
 
+Login to IAM using service credentials
+
+
+<!-- action-docs-description -->
+
+<!-- action-docs-inputs -->
 ## Inputs
 
-## `region`
+| parameter | description | required | default |
+| - | - | - | - |
+| service-id | The IAM service id | `true` | notset |
+| private-key | The IAM service RSA private key | `true` | notset |
+| region | The IAM region to log into | `true` | us-east |
+| environment | The IAM environment to log into | `true` | client-test |
 
-**Required** The IAM region to log in. Default `"us-east"`
 
-## `environment`
 
-**Required** The IAM environment to log in. Default `"client-test"`
+<!-- action-docs-inputs -->
 
-## `service-id`
-
-**Required** The service ID to use
-
-## `private-key`
-
-**Required** The private key of the service ID
-
+<!-- action-docs-outputs -->
 ## Outputs
 
-## `token`
+| parameter | description |
+| - | - |
+| token | The IAM token |
+| message | An informational message about the request |
 
-The IAM token
 
-## `message`
 
-Informational message on the output
+<!-- action-docs-outputs -->
+
+<!-- action-docs-runs -->
+## Runs
+
+This action is an `docker` action.
+
+
+<!-- action-docs-runs -->
 
 ## Example usage
 
