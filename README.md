@@ -1,34 +1,12 @@
 # IAM Service login action
 
-This action logs into HSDP IAM with service credentials
+<!-- action-docs-description -->
 
-## Inputs
+<!-- action-docs-inputs -->
 
-## `region`
+<!-- action-docs-outputs -->
 
-**Required** The IAM region to log in. Default `"us-east"`
-
-## `environment`
-
-**Required** The IAM environment to log in. Default `"client-test"`
-
-## `service-id`
-
-**Required** The service ID to use
-
-## `private-key`
-
-**Required** The private key of the service ID
-
-## Outputs
-
-## `token`
-
-The IAM token
-
-## `message`
-
-Informational message on the output
+<!-- action-docs-runs -->
 
 ## Example usage
 
