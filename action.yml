@@ -10,7 +10,7 @@ inputs:
     required: true
     default: 'notset'
   private-key:
-    description: 'The IAM service private key'
+    description: 'The IAM service RSA private key'
     required: true
     default: 'notset'
   region:
