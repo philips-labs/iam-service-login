@@ -38,7 +38,12 @@ func main() {
 		fmt.Printf("::set-output name=message::ServiceLogin: %v\n", err)
 		os.Exit(1)
 	}
-	fmt.Printf("::add-mask::%s\n", client.Token())
-	fmt.Printf("::set-output name=token::%s\n", client.Token())
+	token, err := client.Token()
+	if err != nil {
+		fmt.Printf("::set-output name=message::ServiceLogin: %v\n", err)
+		return
+	}
+	fmt.Printf("::add-mask::%s\n", token)
+	fmt.Printf("::set-output name=token::%s\n", token)
 	fmt.Printf("::set-output name=message::Login success\n")
 }
