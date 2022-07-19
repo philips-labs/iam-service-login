@@ -2,4 +2,4 @@ module iam-service-login
 
 go 1.16
 
-require github.com/philips-software/go-hsdp-api v0.71.2
+require github.com/philips-software/go-hsdp-api v0.72.3
